@@ -9,7 +9,8 @@ public class PlayerControler : MonoBehaviour
     private InputAction jumpAction;
 
     private Vector2 moveInput; 
-
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float 
     //Theses are the componets
     [SerializeField] private Rigidbody rb; 
 
@@ -60,7 +61,17 @@ public class PlayerControler : MonoBehaviour
 
        
        private void HandleJump()
+       if (IsGrounded())
        {
-        Debug.Log("Jump My Bones!");
+        
+        rb.AddForce( Vector3.up * jumpForce, ForceMode. Impulse);
+     
        }
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transoform.position, Vector3.down, groundCheckDistance, groundLayer);
+    Debug.DrawRay(
+        transform.position, Vector3.down * groundCheckDistance
+    );
+    }
 }

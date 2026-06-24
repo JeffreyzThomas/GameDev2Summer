@@ -164,7 +164,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 1, z: 1}
+  m_Size: {x: 10, y: 9, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4908728059682056696
 MonoBehaviour:
@@ -303,7 +303,6 @@ GameObject:
   - component: {fileID: 1854214171988798514}
   - component: {fileID: 8783394051082322306}
   - component: {fileID: 2565957299342751340}
-  - component: {fileID: 7179783796505435417}
   - component: {fileID: 1599464516042013632}
   m_Layer: 3
   m_Name: Ground
@@ -409,19 +408,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7179783796505435417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412660230553151939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae016416008cc4c03872f82c6cddb7fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GroundSection
-  moveSpeed: 50
 --- !u!114 &1599464516042013632
 MonoBehaviour:
   m_ObjectHideFlags: 0

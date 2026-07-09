@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
         }
     } 
 
-    public void UpdateScore(int score)
+    public void UpdateScore(int Distance)
     {
         // Update the score text object with the given score
         scoreText.text = $"Distance: {Distance}";

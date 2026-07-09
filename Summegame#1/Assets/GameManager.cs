@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     // Stores the one (and only) instance of this script
     public static GameManager Instance {get; private set;}
-
+    [SerializeField] public static bool isGameOver = false;
     private void Awake()
     {
         // Check our singleton
@@ -19,15 +19,29 @@ public class GameManager : MonoBehaviour
             // Destroy this extra copy of this script
             Destroy(gameObject);
         }
+      isGameOver = false;
     } 
+   
 
     public void GameOver()
     {
-        // Trigger Lose state UI
-        // ...
+       if ( isGameOver) return;
 
-        // Load the scene at build index 0
-        SceneManager.LoadScene(0);
+       isGameOver = true;
+
+     UIManager.Instance.ToggleGameOverUI(true);
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadCurretScene(0);
+
+    }
+
+    public void .LoadCurretScene()
+    {
+        SceneManager.LoaScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+ 
 }

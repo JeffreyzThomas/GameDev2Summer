@@ -32,16 +32,12 @@ public class GameManager : MonoBehaviour
      UIManager.Instance.ToggleGameOverUI(true);
     }
 
-    public void LoadMainMenu()
+    public void LoadCurrentScene()
     {
-        SceneManager.LoadCurretScene(0);
-
-    }
-
-    public void .LoadCurretScene()
-    {
-        SceneManager.LoaScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
  
 }
+
+

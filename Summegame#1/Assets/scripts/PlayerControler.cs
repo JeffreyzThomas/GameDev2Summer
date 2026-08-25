@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     private void HandleMovement()
     {
         // Calcualte & store the direction the player will move based on the input
-        UnityEngine.Vector3 moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x;
+        UnityEngine.Vector3 moveDirection = transform.forward * moveSpeed + transform.right * moveInput.x * moveSpeed;
 
         // Prevent diagonal movement from moving the player faster
         moveDirection.Normalize();

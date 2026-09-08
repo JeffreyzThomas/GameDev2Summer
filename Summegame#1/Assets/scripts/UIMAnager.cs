@@ -27,10 +27,10 @@ public class UIManager : MonoBehaviour
         GameOver.SetActive(false); 
     } 
 
-    public void UpdateScore(int Distance)
+    public void UpdateScore(float distance)
     {
         // Update the score text object with the given score
-        scoreText.text = $"Distance: {Distance}";
+        scoreText.text = $"Distnace:" + distance.ToString("F0");
     }
 
 

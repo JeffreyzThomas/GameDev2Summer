@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     // PLAYER SETTINGS
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float distance
+     = 0f;
 
     // Awake() is called once only when the script instance is loaded, used for initializing variables
     private void Awake()
@@ -33,6 +35,8 @@ public class PlayerController : MonoBehaviour
 
         // Assign the rb variable to the players rigidbody component
         rb = GetComponent<Rigidbody>();
+        distance
+         = 0;
     }
 
     private void OnEnable()
@@ -64,6 +68,12 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         HandleMovement();
+        // Update distance
+
+        distance
+         = transform.position.z;
+        // Update the UI
+        UIManager.Instance.UpdateScore(distance);
     }
 
     private void HandleMovement()
